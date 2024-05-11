@@ -1,1 +1,1 @@
-#Basic larning of react concept
+#Basic learning of react concept
