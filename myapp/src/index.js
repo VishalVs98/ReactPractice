@@ -1,17 +1,31 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import ReactDom from 'react-dom';
+import './index.css'; 
+function BookList(){
+  return (
+  <section className='booklist'>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+  </section>
+  );
+  };
+  const Book=()=>{
+    return (<article className='book'>
+      <Image/>
+      <Title/>
+      <Autor/>
+    </article>);
+  };
+  const Image=()=>(
+   <img src='https://images-na.ssl-images-amazon.com/images/I/81RrEEMiOCL._AC_UL600_SR600,400_.jpg' alt=''/>
+  );
+  const Title=()=><h1>A Court of Thorns and Roses</h1>;
+  const Autor=()=><h4 style={{color:'#6167d98',fontSize:'0.75rem'}}>Sarah J. Maas</h4>;
+ReactDom.render(<BookList/>,document.getElementById('root'));
